@@ -1,28 +1,35 @@
 import React from "react";
-const repositoryName = 'unform';
+import RepositoryItem from "../RepositoryItem";
 
-class RepositoryList extends React.Component{
+export default function RepositoryList() {
 
-
-  render(){
+  const repository = {
+    name: 'unform',
+    description: 'Forms in React',
+    link: 'https://github.com/unform/unform',
+  };
     return (
       <section className="repository-list">
+
         <h1>RepositoryList</h1>
         <ul>
-        <li>
-          <strong>Uniform</strong>
-          <p>Forms in ReactJS</p>
-          <p> { repositoryName } </p>
-          <a href=" ">
-            Acess Repository
-          </a>
-        </li>
+          <RepositoryItem 
+            repository={ repository }
+          />
+          <RepositoryItem 
+            repository={ repository }
+          />
+          <RepositoryItem 
+            repository={ repository }
+          />
+          <RepositoryItem 
+            repository={ repository }
+          />
       </ul>
       </section>
     );
   }
-}
 
-export default RepositoryList;
+
 
 
