@@ -6,8 +6,13 @@ import "./style.scss";
 export default function RepositoryList() {
 
 
-  // https://api.github.com/orgs/rocketseat/repos
-  const [repositories, setRepositories] = useState([]);
+  interface Repository {
+    id: number;
+    name: string;
+    description: string;
+    html_url: string;
+  };
+  const [repositories, setRepositories] = useState<Repository[]>([]);
 
   useEffect(() => {
     /*
